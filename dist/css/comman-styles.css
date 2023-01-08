@@ -1,0 +1,27 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Josefin Sans'; }
+
+body {
+  height: 100vh;
+  width: 100%; }
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative; }
+  .container .inside-container {
+    padding: 40px; }
+    .container .inside-container nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 10px; }
+
+/*# sourceMappingURL=comman-styles.css.map */
