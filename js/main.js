@@ -1,13 +1,19 @@
 //! togglin color theme
+let localSreg = /^\//;
+
+if (localSreg.test(window.localStorage.theme)) {
+    window.localStorage.clear();
+}
+
 document.getElementById('theme').href =
-    window.localStorage.theme || '/dist/css/main-dark.css';
+    window.localStorage.theme || 'dist/css/main-dark.css';
 document.getElementById('chnge-theme').addEventListener('click', e => {
     //console.log(e);
-    let light = '/dist/css/main-light.css';
-    let dark = '/dist/css/main-dark.css';
+    let light = 'dist/css/main-light.css';
+    let dark = 'dist/css/main-dark.css';
 
-    let reglight = /\/dist\/css\/main-light.css/gi;
-    let regdark = /\/dist\/css\/main-dark.css/gi;
+    let reglight = /dist\/css\/main-light.css/gi;
+    let regdark = /dist\/css\/main-dark.css/gi;
 
     let hr = document.getElementById('theme').href;
     console.log(hr);

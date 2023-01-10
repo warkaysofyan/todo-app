@@ -1,15 +1,15 @@
 @media screen and (min-width: 375px) {
   body {
-    background: #161722 url("/../images/bg-desktop-dark.jpg") no-repeat fixed;
+    background: #161722 url("./../../images/bg-desktop-dark.jpg") no-repeat fixed;
   }
 }
 @media screen and (max-width: 375px) {
   body {
-    background: #161722 url("/../images/bg-mobile-dark.jpg") no-repeat fixed;
+    background: #161722 url("./../../images/bg-mobile-dark.jpg") no-repeat fixed;
   }
 }
 body .inside-container nav > div:last-child {
-  background: url(/../images/icon-sun.svg) no-repeat;
+  background: url(./../../images/icon-sun.svg) no-repeat;
 }
 body .inside-container > :nth-child(2) input {
   background-color: #25273c !important;

@@ -1,17 +1,17 @@
 @import 'variables';
 body {
     @media screen and (min-width: 375px) {
-        background: $V_Dark_Blue url('/../images/bg-desktop-dark.jpg') no-repeat
-            fixed;
+        background: $V_Dark_Blue url('./../../images/bg-desktop-dark.jpg')
+            no-repeat fixed;
     }
     @media screen and (max-width: 375px) {
-        background: $V_Dark_Blue url('/../images/bg-mobile-dark.jpg') no-repeat
-            fixed;
+        background: $V_Dark_Blue url('./../../images/bg-mobile-dark.jpg')
+            no-repeat fixed;
     }
     .inside-container {
         nav {
             > div:last-child {
-                background: url(/../images/icon-sun.svg) no-repeat;
+                background: url(./../../images/icon-sun.svg) no-repeat;
             }
         }
         > :nth-child(2) {
