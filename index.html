@@ -5,70 +5,82 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&family=Poppins:wght@100;200;300;400;500;700;800&display=swap"
             rel="stylesheet"
-        />
+        /> -->
         <link rel="stylesheet" href="/dist/css/comman-styles.css" />
+        <link rel="stylesheet" id="theme" href="/dist/css/main-dark.css" />
         <link
             rel="shortcut icon"
             href="/images/favicon-32x32.png"
             type="image/x-icon"
         />
-        <script
+        <!-- <script
             src="https://code.jquery.com/jquery-3.6.3.min.js"
             integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
             crossorigin="anonymous"
-        ></script>
-        <link rel="stylesheet" href="dist/css/main-dark-light.css" />
+        ></script> -->
+        <script src="vendor/js/jquery-3.6.3.min.js"></script>
     </head>
     <body>
         <div class="container">
             <div class="inside-container">
                 <nav>
                     <div>TODO</div>
+<<<<<<< HEAD
                     <div>imgojloij</div>
+=======
+                    <div id="chnge-theme"></div>
+>>>>>>> 9c0b926 (styling the page)
                 </nav>
                 <div>
-                    <input type="checkbox" name="" id="" />
-                    <input type="text" />
+                    <div class="checkInp" id="checkBox"></div>
+                    <input
+                        id="inp"
+                        placeholder="Create a new todo... and press Enter"
+                        type="text"
+                        maxlength="60"
+                    />
                 </div>
-                <div>
+                <div class="todos_container">
                     <div>
-                        <input type="checkbox" name="" id="" />
-                        <p>grtting started</p>
+                        <div class="check"></div>
+                        <p>Do something nice for someone I care about</p>
                     </div>
                     <div>
-                        <input type="checkbox" name="" id="" />
-                        <p>grtting started</p>
+                        <div class="check checked"></div>
+                        <p>Memorize the fifty states and their capitals</p>
                     </div>
                     <div>
-                        <input type="checkbox" name="" id="" />
-                        <p>grtting started</p>
+                        <div class="check checked"></div>
+                        <p>Watch a classic movie</p>
                     </div>
                     <div>
-                        <input type="checkbox" name="" id="" />
-                        <p>grtting started</p>
+                        <div class="check checked"></div>
+                        <p>Solve a Rubik's cube</p>
                     </div>
                     <div>
-                        <input type="checkbox" name="" id="" />
-                        <p>grtting started</p>
+                        <div class="check checked">
+                            <img src="images/icon-check.svg" alt="" />
+                        </div>
+                        <p>Bake pastries for me and neighbor</p>
                     </div>
                 </div>
-                <div>
+                <div class="child-3">
                     <p>3 items left</p>
                     <div>
-                        <button>All</button>
-                        <button>Active</button>
-                        <button>Completed</button>
+                        <div id="all">All</div>
+                        <div>Active</div>
+                        <div>Completed</div>
                     </div>
-                    <button>Clear Completed</button>
+                    <div>Clear Completed</div>
                 </div>
-                <p>Drag and drop to reorder list</p>
+                <p class="child-4">Drag and drop to reorder list</p>
             </div>
         </div>
-        <script></script>
+        <script src="js/main.js"></script>
     </body>
 </html>

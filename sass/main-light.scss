@@ -1,0 +1,38 @@
+@import 'variables';
+body {
+    @media screen and (min-width: 375px) {
+        background: $Light_Grayish_Blue url('/../images/bg-desktop-light.jpg')
+            no-repeat fixed;
+    }
+    @media screen and (max-width: 375px) {
+        background: $Light_Grayish_Blue url('/../images/bg-mobile-light.jpg')
+            no-repeat fixed;
+    }
+    .inside-container {
+        nav {
+            > div:last-child {
+                background: url(/../images/icon-moon.svg) no-repeat;
+            }
+        }
+        > :nth-child(2) {
+            input {
+                background-color: $V_L_Grayish_Blue !important;
+                color: $V_D_Grayish_Blue;
+            }
+        }
+        > :nth-child(3) {
+            div {
+                background-color: $V_L_Grayish_Blue !important;
+                color: $V_D_Grayish_Blue;
+            }
+        }
+        > :nth-child(4) {
+            background-color: $V_L_Grayish_Blue !important;
+            color: $D_Grayish_Blue;
+            font-weight: 400px;
+            > div {
+                background-color: $V_L_Grayish_Blue !important;
+            }
+        }
+    }
+}

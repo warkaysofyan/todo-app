@@ -1,11 +1,14 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Josefin Sans'; }
+  font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
 
 body {
   height: 100vh;
-  width: 100%; }
+  width: 100%;
+}
 
 .container {
   height: 100%;
@@ -13,15 +16,167 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+}
+.container .inside-container {
+  position: absolute;
+  top: 70px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 450px;
+}
+.container .inside-container nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 50px 0;
+}
+.container .inside-container nav > div:first-child {
+  font-size: 2rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  align-self: center;
+}
+.container .inside-container nav > div:last-child {
+  width: 27px;
+  height: 27px;
+  background-color: transparent;
+  align-self: center;
+  cursor: pointer;
+}
+.container .inside-container > :nth-child(2) {
+  width: 100%;
+  position: relative;
+  display: flex;
+  margin-bottom: 20px;
+}
+.container .inside-container > :nth-child(2) input {
+  border-radius: 6px;
+  background-color: aquamarine;
+  border: none;
+  width: 100%;
+  height: 50px;
+  padding-left: 40px;
+  padding-right: 10px;
+  font-size: large;
+}
+.container .inside-container > :nth-child(2) input:focus {
+  outline: none;
+  border: none;
+}
+.container .inside-container > :nth-child(2) .checkInp {
+  background-color: transparent;
+  width: 20px;
+  height: 20px;
+  border-radius: 12px;
+  border: #484b6a 1px solid;
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+.container .inside-container > :nth-child(3) {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  overflow: hidden;
+}
+.container .inside-container > :nth-child(3) > div {
+  background-color: Blue;
+  width: 90%;
+  height: 60px;
+  display: flex;
+  position: relative;
+  padding-left: 40px;
+  padding-right: 10px;
+}
+.container .inside-container > :nth-child(3) > div:not(:first-child) {
+  border-top: #9394a5 1px solid;
+}
+.container .inside-container > :nth-child(3) > div > p {
+  align-self: center;
+}
+.container .inside-container > :nth-child(3) > div > div {
+  background-color: transparent;
+  width: 20px;
+  height: 20px;
+  border-radius: 12px;
+  border: #484b6a 1px solid;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+.container .inside-container > :nth-child(4) {
+  background-color: red;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  position: relative;
+  border-top: #9394a5 1px solid;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.container .inside-container > :nth-child(4) > :nth-child(1) {
+  margin-left: 20px;
+}
+.container .inside-container > :nth-child(4) > :nth-child(3) {
+  margin-right: 20px;
+}
+.container .inside-container > :nth-child(4) > :nth-child(2) {
+  display: flex;
   justify-content: center;
-  position: relative; }
+  gap: 8px;
+}
+.container .inside-container > :nth-child(5) {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.checked {
+  background: linear-gradient(#57ddff, #c058f3) !important;
+}
+
+@media screen and (max-width: 375px) {
   .container .inside-container {
-    padding: 40px; }
-    .container .inside-container nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-      padding: 10px; }
+    width: 90%;
+  }
+
+  .container .inside-container {
+    top: 20px;
+  }
+
+  .todos_container > div {
+    height: 60px !important;
+  }
+  .todos_container > div > div {
+    top: 20px !important;
+  }
+
+  .child-3 > :nth-child(2) {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    border-radius: 6px;
+    height: 40px;
+    align-items: center;
+    column-gap: 25px !important;
+  }
+
+  .child-4 {
+    margin-top: 75px !important;
+  }
+}
 
 /*# sourceMappingURL=comman-styles.css.map */

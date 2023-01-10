@@ -1,0 +1,38 @@
+@import 'variables';
+body {
+    @media screen and (min-width: 375px) {
+        background: $V_Dark_Blue url('/../images/bg-desktop-dark.jpg') no-repeat
+            fixed;
+    }
+    @media screen and (max-width: 375px) {
+        background: $V_Dark_Blue url('/../images/bg-mobile-dark.jpg') no-repeat
+            fixed;
+    }
+    .inside-container {
+        nav {
+            > div:last-child {
+                background: url(/../images/icon-sun.svg) no-repeat;
+            }
+        }
+        > :nth-child(2) {
+            input {
+                background-color: $V_Dark_Desaturated_Blue !important;
+                color: $Dark_Grayish-Blue;
+            }
+        }
+        > :nth-child(3) {
+            div {
+                background-color: $V_Dark_Desaturated_Blue !important;
+                color: $Dark_Grayish-Blue;
+            }
+        }
+        > :nth-child(4) {
+            background-color: $V_Dark_Desaturated_Blue !important;
+            color: $D_Grayish_Blue;
+            font-weight: 400px;
+            > div {
+                background-color: $V_Dark_Desaturated_Blue !important;
+            }
+        }
+    }
+}

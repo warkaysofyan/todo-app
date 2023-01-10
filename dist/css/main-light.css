@@ -1,3 +1,30 @@
-
-
+@media screen and (min-width: 375px) {
+  body {
+    background: #d2d3db url("/../images/bg-desktop-light.jpg") no-repeat fixed;
+  }
+}
+@media screen and (max-width: 375px) {
+  body {
+    background: #d2d3db url("/../images/bg-mobile-light.jpg") no-repeat fixed;
+  }
+}
+body .inside-container nav > div:last-child {
+  background: url(/../images/icon-moon.svg) no-repeat;
+}
+body .inside-container > :nth-child(2) input {
+  background-color: #e4e5f1 !important;
+  color: #484b6a;
+}
+body .inside-container > :nth-child(3) div {
+  background-color: #e4e5f1 !important;
+  color: #484b6a;
+}
+body .inside-container > :nth-child(4) {
+  background-color: #e4e5f1 !important;
+  color: #777a92;
+  font-weight: 400px;
+}
+body .inside-container > :nth-child(4) > div {
+  background-color: #e4e5f1 !important;
+}
 /*# sourceMappingURL=main-light.css.map */
