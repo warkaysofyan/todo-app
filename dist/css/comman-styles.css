@@ -128,16 +128,22 @@ body {
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
 }
+.container .inside-container > :nth-child(4) .active {
+  color: #3a7bfd;
+}
 .container .inside-container > :nth-child(4) > :nth-child(1) {
   margin-left: 20px;
+  cursor: pointer;
 }
 .container .inside-container > :nth-child(4) > :nth-child(3) {
   margin-right: 20px;
+  cursor: pointer;
 }
 .container .inside-container > :nth-child(4) > :nth-child(2) {
   display: flex;
   justify-content: center;
   gap: 8px;
+  cursor: pointer;
 }
 .container .inside-container > :nth-child(5) {
   margin-top: 50px;
@@ -177,6 +183,11 @@ body {
   .child-4 {
     margin-top: 75px !important;
   }
+}
+.checked_content {
+  text-decoration: line-through !important;
+  font-style: italic !important;
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=comman-styles.css.map */

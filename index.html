@@ -33,46 +33,24 @@
                     <div id="chnge-theme"></div>
                 </nav>
                 <div>
-                    <div class="checkInp" id="checkBox"></div>
+                    <div class="checkInp check" id="checkBox"></div>
                     <input
                         id="inp"
+                        class="content"
                         placeholder="Create a new todo... and press Enter"
                         type="text"
                         maxlength="60"
                     />
                 </div>
-                <div class="todos_container">
-                    <div>
-                        <div class="check"></div>
-                        <p>Do something nice for someone I care about</p>
-                    </div>
-                    <div>
-                        <div class="check checked"></div>
-                        <p>Memorize the fifty states and their capitals</p>
-                    </div>
-                    <div>
-                        <div class="check checked"></div>
-                        <p>Watch a classic movie</p>
-                    </div>
-                    <div>
-                        <div class="check checked"></div>
-                        <p>Solve a Rubik's cube</p>
-                    </div>
-                    <div>
-                        <div class="check checked">
-                            <img src="images/icon-check.svg" alt="" />
-                        </div>
-                        <p>Bake pastries for me and neighbor</p>
-                    </div>
-                </div>
+                <div class="todos_container" id="todos_container"></div>
                 <div class="child-3">
-                    <p>3 items left</p>
-                    <div>
-                        <div id="all">All</div>
-                        <div>Active</div>
-                        <div>Completed</div>
+                    <p id="left">3 items left</p>
+                    <div id="all-btns">
+                        <div class="active" id="all">All</div>
+                        <div id="activ">Active</div>
+                        <div id="compleated">Completed</div>
                     </div>
-                    <div>Clear Completed</div>
+                    <di id="clear">Clear Completed</di>
                 </div>
                 <p class="child-4">Drag and Drop to reorder list</p>
             </div>
