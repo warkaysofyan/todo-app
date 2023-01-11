@@ -95,12 +95,14 @@ body {
   position: relative;
   padding-left: 40px;
   padding-right: 10px;
+  cursor: grabbing;
 }
 .container .inside-container > :nth-child(3) > div:not(:first-child) {
   border-top: #9394a5 1px solid;
 }
 .container .inside-container > :nth-child(3) > div > p {
   align-self: center;
+  cursor: grabbing;
 }
 .container .inside-container > :nth-child(3) > div > div {
   background-color: transparent;

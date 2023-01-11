@@ -95,8 +95,10 @@ body {
                 position: relative;
                 padding-left: 40px;
                 padding-right: 10px;
+                cursor: grabbing;
                 > p {
                     align-self: center;
+                    cursor: grabbing;
                 }
 
                 > div {
