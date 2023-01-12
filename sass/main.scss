@@ -88,6 +88,16 @@ body {
                 &:not(:first-child) {
                     border-top: $Dark_Grayish-Blue 1px solid;
                 }
+                > span {
+                    align-self: center;
+                    position: absolute;
+                    //top: 20px;
+                    right: 20px;
+                    width: 20px;
+                    height: 100%;
+                    cursor: pointer;
+                    display: none;
+                }
                 background-color: Blue;
                 width: 90%;
                 height: 60px;
@@ -96,6 +106,12 @@ body {
                 padding-left: 40px;
                 padding-right: 10px;
                 cursor: grabbing;
+                &:hover {
+                    > span {
+                        display: grid;
+                        place-items: center;
+                    }
+                }
                 > p {
                     align-self: center;
                     cursor: grabbing;
@@ -108,7 +124,8 @@ body {
                     border-radius: 12px;
                     border: $V_D_Grayish_Blue 1px solid;
                     position: absolute;
-                    top: 20px;
+                    //top: 20px;
+                    align-self: center;
                     left: 10px;
                     cursor: pointer;
                     display: grid;
@@ -163,7 +180,7 @@ body {
 
 // ! phone styles
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 450px) {
     .container .inside-container {
         width: 90%;
     }
@@ -175,6 +192,10 @@ body {
             height: 60px !important;
             > div {
                 top: 20px !important;
+            }
+            > span {
+                display: grid !important;
+                place-items: center;
             }
         }
     }

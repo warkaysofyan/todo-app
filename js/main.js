@@ -16,7 +16,6 @@ if (localSreg.test(window.localStorage.theme)) {
 document.getElementById('theme').href =
     window.localStorage.theme || 'dist/css/main-dark.css';
 document.getElementById('chnge-theme').addEventListener('click', e => {
-    //console.log(e);
     let light = 'dist/css/main-light.css';
     let dark = 'dist/css/main-dark.css';
 
@@ -61,6 +60,12 @@ let toggleCheck = (A, B, C) => {
     });
 };
 toggleCheck(check[0], content[0]);
+// ! remove childe number n
+
+let removeTodo = n => {
+    let todoContent = document.getElementById('todos_container');
+    todoContent.removeChild(todoContent.children[parseInt(n) - 1]);
+};
 // ! remove all children
 
 let removeTodos = () => {
@@ -71,6 +76,23 @@ let removeTodos = () => {
     }
 };
 let number = 0;
+// ! addin an event listener to the remove-item btn
+let removeItem = A => {
+    A.addEventListener('click', e => {
+        let tar =
+            e.target.getAttribute('deleted-item') ||
+            e.target.parentElement.getAttribute('deleted-item');
+        if (tar == 0) {
+            removeTodo(1);
+        } else {
+            removeTodo(tar);
+        }
+        todos.splice(tar, 1);
+        window.localStorage.todo = JSON.stringify(todos);
+
+        filter('all');
+    });
+};
 
 // ! the function that adds one todo and added the toggleCheck();
 let addTodo = (todo, compleat, id) => {
@@ -80,20 +102,28 @@ let addTodo = (todo, compleat, id) => {
     let CDiv = document.createElement('div');
     CDiv.setAttribute('order', id);
     let Cp = document.createElement('p');
+    let Csp = document.createElement('span');
+    Csp.setAttribute('deleted-item', id);
     let img = document.createElement('img');
+    let img1 = document.createElement('img');
     img.setAttribute('src', 'images/icon-check.svg');
+    img1.setAttribute('src', 'images/icon-cross.svg');
     Cp.className = 'content';
+    Csp.className = 'remove-item';
     CDiv.className = 'check';
     if (compleat) {
         Cp.classList.add('checked_content');
         CDiv.classList.add('checked');
         CDiv.appendChild(img);
     }
+    Csp.appendChild(img1);
     Cp.appendChild(todoContent);
     pDiv.appendChild(CDiv);
     pDiv.appendChild(Cp);
+    pDiv.appendChild(Csp);
     todoContainer.appendChild(pDiv);
     toggleCheck(CDiv, Cp);
+    removeItem(Csp);
 };
 // ! refreshing how meny items left
 let howMenyLeft = () => {
@@ -139,27 +169,9 @@ let appendAllTodos = () => {
         addTodo(el.todo, el.compleated);
     });
 };
-// ! remove childe number n
-
-let removeTodo = n => {
-    let todoContent = document.getElementById('todos_container');
-    todoContent.removeChild(todoContent.children[parseInt(n) - 1]);
-};
-
-// ! adding a todo to  the local storag
-
-let addTodoToLocal = (content, compleated) => {
-    let Existed = window.localStorage.todo;
-    if (Existed) {
-        console.log(Existed);
-    } else {
-        console.log('not Existed');
-    }
-};
 
 // ! adding a todo to  the DOM
 window.inp.addEventListener('focus', e => {
-    console.log('focused');
     document.querySelector('.active').classList.remove('active');
     document.querySelector('#all').classList.add('active');
     filter('all');
@@ -180,9 +192,9 @@ window.inp.addEventListener('keydown', e => {
             todoObg.compleated = compleated;
             number++;
             todoObg.order = number;
-            console.log(typeof todos);
             todos.push(todoObg);
-            addTodo(inpValue, compleated);
+            let id = todos.length;
+            addTodo(inpValue, compleated, id);
             window.localStorage.todo = JSON.stringify(todos);
             howMenyLeft();
         } else {
@@ -192,7 +204,6 @@ window.inp.addEventListener('keydown', e => {
 });
 
 document.getElementById('clear').addEventListener('click', () => {
-    console.log(todos.length);
     todos.forEach((el, i) => {
         if (el.compleated) {
             todos.splice(i, 1);

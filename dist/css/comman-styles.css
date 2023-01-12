@@ -100,6 +100,19 @@ body {
 .container .inside-container > :nth-child(3) > div:not(:first-child) {
   border-top: #9394a5 1px solid;
 }
+.container .inside-container > :nth-child(3) > div > span {
+  align-self: center;
+  position: absolute;
+  right: 20px;
+  width: 20px;
+  height: 100%;
+  cursor: pointer;
+  display: none;
+}
+.container .inside-container > :nth-child(3) > div:hover > span {
+  display: grid;
+  place-items: center;
+}
 .container .inside-container > :nth-child(3) > div > p {
   align-self: center;
   cursor: grabbing;
@@ -111,7 +124,7 @@ body {
   border-radius: 12px;
   border: #484b6a 1px solid;
   position: absolute;
-  top: 20px;
+  align-self: center;
   left: 10px;
   cursor: pointer;
   display: grid;
@@ -159,7 +172,7 @@ body {
   width: 20px !important;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 450px) {
   .container .inside-container {
     width: 90%;
   }
@@ -173,6 +186,10 @@ body {
   }
   .todos_container > div > div {
     top: 20px !important;
+  }
+  .todos_container > div > span {
+    display: grid !important;
+    place-items: center;
   }
 
   .child-3 > :nth-child(2) {
