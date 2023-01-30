@@ -90,7 +90,7 @@ let removeItem = A => {
         }
         todos.splice(tar, 1);
         window.localStorage.todo = JSON.stringify(todos);
-
+        howMenyLeft();
         filter('all');
     });
 };
