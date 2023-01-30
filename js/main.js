@@ -65,6 +65,7 @@ toggleCheck(check[0], content[0]);
 let removeTodo = n => {
     let todoContent = document.getElementById('todos_container');
     todoContent.removeChild(todoContent.children[parseInt(n) - 1]);
+    howMenyLeft();
 };
 // ! remove all children
 
